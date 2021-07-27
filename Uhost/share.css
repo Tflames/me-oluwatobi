@@ -1,0 +1,112 @@
+body {
+  background-color: rgb(15, 138, 42);
+  background-image: radial-gradient(hsl(140, 92%, 51%), hsl(138, 41%, 35%));
+  color: rgb(197, 194, 194);
+  font-family: Helvetica Arial, sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  min-height: 100vh;
+}
+.main-header__image {
+  height: 2rem;
+}
+.main-header {
+  position:fixed;
+  top: 0;
+  left: 0;
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  background-color: white;
+}
+.menu-toggle {
+  font-size: 5em;
+  cursor: pointer;
+}
+.menu-toggle::after {
+  display: block;
+  content: "\2261";
+  margin-right: 8px;
+}
+.menu-toggle:active {
+  border: 0;
+}
+.menu-dropdown {
+  list-style: none;
+  border-top: 4px solid rgb(43, 145, 43);
+}
+.menu.is-open .menu-dropdown {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 3.2rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+}
+.menu-dropdown li a {
+  text-decoration: none;
+  color: green;
+  font-weight: 1000;
+  font-size: large;
+}
+@media (max-width: 60rem) {
+  .menu-dropdown {
+    display: none;
+  }
+  .main-head {
+    background: url("./images/freedom.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left 30% bottom 40%;
+  }
+
+}
+@media (min-width: 61rem) {
+  .menu-dropdown {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    border: 0;
+  }
+  .menu-dropdown li a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: rgb(238, 234, 234);
+    color: green;
+    margin: 2px;
+    border-radius: 8px;
+    border: none;
+  }
+  .menu-dropdown li a:hover,
+  .menu-dropdown li a:active {
+    color: rgb(197, 195, 195);
+    background-image: radial-gradient(hsl(140, 92%, 51%), #357e4b);
+  }
+  .menu-toggle {
+    display: none;
+  }
+}
+.terms-lists {
+  background-color: black;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  position: static;
+  bottom: 0;
+  right: 0;
+}
+.terms-list a {
+  text-decoration: none;
+  margin: 6px;
+  color: white;
+}
+

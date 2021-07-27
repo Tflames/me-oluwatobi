@@ -1,0 +1,47 @@
+:root {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  font-size: calc(1vh + 0.5em);
+}
+body {
+  margin-left: 0;
+  background: url("../images/plans-background.jpg");
+  color: gray;
+}
+.main-header {
+  top: 0;
+}
+.main-package {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+.package {
+  background-image: radial-gradient(hsl(140, 92%, 51%), hsl(138, 41%, 35%));
+  padding: 2rem;
+  margin-top: 3rem;
+  width: 80%;
+  text-align: center;
+}
+#free {
+  align-self: flex-end;
+}
+.plan-title {
+  text-transform: uppercase;
+
+}
+a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 4px 1px 2px gray;
+}
+.package__info {
+  background-color: rgb(244, 245, 244);
+  color: rgb(10, 92, 10);
+  padding: 4px 2px;
+  margin: 2px;
+}
